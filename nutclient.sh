@@ -25,4 +25,6 @@ chmod +x /etc/nut/upssched-cmd
 service nut-client start
 systemctl start nut-monitor
 
+journalctl -u nut-monitor --no-pager
+
 echo "Nut successfully configured"

@@ -17,7 +17,7 @@ echo "Configuring NUT"
 sed -i "s/^MONITOR.*/MONITOR ups@192.168.84.243 1 upsmon pssupsmonitor2024 master/g" /etc/nut/upsmon.conf
 
 # remove unused files
-rm /etc/nut/ups.conf upsd.* nut.conf
+rm /etc/nut/ups.conf /etc/nut/upsd.* /etc/nut/nut.conf
 
 echo "MODE=netclient" >/etc/nut/nut.conf
 

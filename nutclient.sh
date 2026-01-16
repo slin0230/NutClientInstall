@@ -65,9 +65,13 @@ echo "MODE=netclient" >/etc/nut/nut.conf
 chmod +x /etc/nut/upssched-cmd
 
 # Restart/Start services with our new configuration
-service nut-client start
-systemctl start nut-monitor
+service nut-client restart
+systemctl restart nut-monitor
 
 journalctl -u nut-monitor --no-pager
+
+echo ""
+echo "Testing connect to NUT server"
+upsc ups@${IPADDR}
 
 echo "Nut successfully configured"
